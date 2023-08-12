@@ -1,0 +1,17 @@
+name: deploy to server
+on:
+  push:
+    branches: ["master"]
+jobs:
+  build:
+    name: Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: cd public_html && cd web && cd ${{ secrets.FOLDER_NAME }} && git pull && composer install --optimize-autoloader --no-dev && php artisan route:clear && php artisan config:clear
