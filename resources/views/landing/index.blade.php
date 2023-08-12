@@ -20,7 +20,6 @@
                             </div>
                         @endforeach
                     @endif
-                    test
                     <form action="" method="post" class="mt-3" id="login">
                         @csrf
                         <div class="mb-3">
