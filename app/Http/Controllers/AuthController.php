@@ -129,7 +129,7 @@ class AuthController extends Controller
         if (Auth::user()->role == 'dosen' || Auth::user()->role == 'mahasiswa') {
             $user = User::find(Auth::user()->id);
 
-            if (!$user || !Hash::check($request->new_password, $user->password)) {
+            if (!$user || !Hash::check($request->old_password, $user->password)) {
                 throw ValidationException::withMessages([
                     'password' => ['Password Lama salah'],
                 ]);
