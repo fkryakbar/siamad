@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 class AuthController extends Controller
@@ -126,6 +128,12 @@ class AuthController extends Controller
 
         if (Auth::user()->role == 'dosen' || Auth::user()->role == 'mahasiswa') {
             $user = User::find(Auth::user()->id);
+
+            if (!$user || !Hash::check($request->new_password, $user->password)) {
+                throw ValidationException::withMessages([
+                    'password' => ['Password Lama salah'],
+                ]);
+            }
 
             $user->update([
                 'password' => bcrypt($request->new_password)
