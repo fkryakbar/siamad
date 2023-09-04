@@ -111,4 +111,28 @@ class AuthController extends Controller
 
         return redirect()->to('/');
     }
+
+    public function reset_password(Request $request)
+    {
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required|min:6|confirmed',
+        ], [
+            'old_password.required' => 'Password Lama Wajib diisi',
+            'new_password.required' => 'Password Baru Wajib diisi',
+            'new_password.min' => 'Password Baru minimal 6 karakter',
+            'new_password.confirmed' => 'Ulangi password baru tidak sesuai',
+        ]);
+
+        if (Auth::user()->role == 'dosen' || Auth::user()->role == 'mahasiswa') {
+            $user = User::find(Auth::user()->id);
+
+            $user->update([
+                'password' => bcrypt($request->new_password)
+            ]);
+
+            return back()->with('message', 'Password Berhasil diperbarui');
+        }
+        abort(404);
+    }
 }

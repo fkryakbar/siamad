@@ -14,4 +14,7 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::get('/change-password', [AuthController::class, 'change_password']);
 Route::post('/change-password', [AuthController::class, 'save_change_password']);
+
+Route::post('/reset-password', [AuthController::class, 'reset_password'])->middleware('auth');
+
 // Route::get('/jwt', [AuthController::class, 'jwt']);
