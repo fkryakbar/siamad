@@ -15,6 +15,6 @@
 <footer class="bg-green-700 p-5 text-white">
     <p class="text-center">SIAMAD © {{ Date('Y') }} - <a class="hover:text-green-500 transition-colors"
             href="https://stitastbr.ac.id" target="_blank">STIT
-            Assunniyyah Tambarangan</a> - <a href="https:ninepmx.my.id" target="_blank"
+            Assunniyyah Tambarangan</a> - <a href="https://ninepmx.my.id" target="_blank"
             class="hover:text-green-500 transition-colors">Developer</a></p>
 </footer>
