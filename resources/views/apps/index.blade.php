@@ -47,7 +47,7 @@
                             </div>
                         @endforeach
                     @endif
-                    <div class="bg-white drop-shadow rounded-lg p-5 mt-2">
+                    <div class="bg-white shadow rounded-lg p-5 mt-2">
                         <form action="/reset-password" method="POST">
                             @csrf
                             <div class="mb-3">
@@ -69,7 +69,7 @@
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline-green-500 active:outline-green-500 active:ring-blue-500 block w-full p-2.5">
                             </div>
                             <button type="submit"
-                                class="bg-green-500 font-semibold p-2 rounded-lg hover:bg-green-700 transition-all w-fit drop-shadow active:scale-105 text-white text-sm">Ganti
+                                class="bg-green-500 font-semibold p-2 rounded-lg hover:bg-green-700 transition-all w-fit shadow active:scale-105 text-white text-sm">Ganti
                                 Password</button>
                         </form>
                     </div>

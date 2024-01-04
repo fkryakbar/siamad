@@ -11,16 +11,16 @@
                 </h2>
             </div>
             @if (auth()->user())
-                <div class="flex justify-center mt-2 text-white gap-2 text-center rounded p-2 bg-green-500 drop-shadow">
+                <div class="flex justify-center mt-2 text-white gap-2 text-center rounded p-2 bg-green-500 shadow">
                     <p class="font-bold text-xl">Selamat datang, {{ auth()->user()->name }}</p>
                 </div>
             @else
                 <div class="flex justify-center mt-2 text-white gap-2">
                     @if (!Request::is('change-password'))
                         <a href="#login"
-                            class="bg-green-500 uppercase font-semibold p-2 rounded-lg hover:bg-green-700 transition-all w-28 drop-shadow active:scale-105 text-center">Masuk</a>
+                            class="bg-green-500 uppercase font-semibold p-2 rounded-lg hover:bg-green-700 transition-all w-28 shadow active:scale-105 text-center">Masuk</a>
                     @endif
-                    <a class="bg-green-500 uppercase font-semibold p-2 rounded-lg hover:bg-green-700 transition-all w-28 drop-shadow active:scale-105 text-center"
+                    <a class="bg-green-500 uppercase font-semibold p-2 rounded-lg hover:bg-green-700 transition-all w-28 shadow active:scale-105 text-center"
                         href="#tentang">Tentang</a>
                 </div>
 

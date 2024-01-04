@@ -1,5 +1,5 @@
 <section class="my-10 lg:w-[50%] mx-auto w-full px-2" id="tentang">
-    <div class="bg-white drop-shadow p-6 rounded-lg">
+    <div class="bg-white shadow p-6 rounded-lg">
         <p class="text-green-500 font-semibold">#Tentang</p>
         <h3 class="text-3xl font-bold tracking-[.25rem] text-green-500">SIAMAD</h3>
         <h5 class="mt-4 lg:text-lg leading-6">Sistem Informasi Akademik Mahasiswa dan Dosen STIT Assunniyyah Tambarangan

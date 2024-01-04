@@ -6,7 +6,7 @@
     <section class="mt-10 lg:w-[50%] mx-auto w-full px-2">
         <div class="flex gap-2 lg:flex-row flex-col flex-wrap-reverse lg:items-center">
             <div class="lg:basis-[59%]">
-                <div class="p-5 rounded-lg bg-white drop-shadow ">
+                <div class="p-5 rounded-lg bg-white shadow ">
                     <h3 class="text-green-500 text-2xl font-bold text-center">GANTI PASSWORD</h3>
                     @if ($errors->any())
                         @foreach ($errors->all() as $error)
@@ -38,7 +38,7 @@
                         </div>
                         <div class="mb-3 flex justify-between items-center">
                             <button type="submit"
-                                class="bg-green-500 font-semibold p-2 rounded-lg hover:bg-green-700 transition-all w-fit drop-shadow active:scale-105 text-white text-sm">Ganti
+                                class="bg-green-500 font-semibold p-2 rounded-lg hover:bg-green-700 transition-all w-fit shadow active:scale-105 text-white text-sm">Ganti
                                 Password</button>
 
                         </div>
