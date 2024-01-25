@@ -14,4 +14,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: cd public_html && cd web && cd ${{ secrets.FOLDER_NAME }} && git pull && composer install --optimize-autoloader --no-dev && php artisan route:clear && php artisan config:clear
+          script: cd public_html && cd ${{ secrets.FOLDER_NAME }} && git pull && composer install --optimize-autoloader --no-dev && php artisan route:clear && php artisan config:clear
